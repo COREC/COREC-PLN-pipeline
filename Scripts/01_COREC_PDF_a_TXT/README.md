@@ -1,4 +1,4 @@
-# 01_COREC_PDF_a_TXT
+# Descripción
 
 Scripts para la conversión de las transcripciones ortográficas del Corpus Oral de Referencia del Español en Contacto (COREC) desde archivos PDF a TXT.
 
