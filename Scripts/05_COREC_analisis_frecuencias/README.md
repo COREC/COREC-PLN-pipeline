@@ -2,8 +2,7 @@
 
 ## Descripción
 
-Esta fase tiene como objetivo **caracterizar cuantitativamente cada entrevista del corpus COREC** mediante un conjunto de atributos lingüísticos, con una doble finalidad:  
-por un lado, servir de base para la **selección de una muestra prototípica** del corpus y, por otro, facilitar el **estudio cuantitativo global** del mismo.
+Esta fase tiene como objetivo **caracterizar cuantitativamente cada entrevista del corpus COREC** mediante un conjunto de atributos lingüísticos, con una doble finalidad: por un lado, servir de base para la **selección de una muestra prototípica** del corpus y, por otro, facilitar el **estudio cuantitativo global** del mismo.
 El análisis se realiza **exclusivamente en memoria**, sin modificar los archivos originales, y respeta los rasgos propios de la oralidad y las anotaciones metalingüísticas del corpus.
 
 ## Entrada
