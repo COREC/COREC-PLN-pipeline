@@ -1,5 +1,5 @@
-## Objetivo
-Normalizar básica y estructuralmente el corpus, sin introducir estandarización lingüística profunda. Se preservan los rasgos propios de la oralidad y las anotaciones metalingüísticas del corpus.
+## Descripción
+El script normaliza básica y estructuralmente el corpus, sin introducir estandarización lingüística profunda. Se preservan en él los rasgos propios de la oralidad y las anotaciones metalingüísticas del corpus.
 
 ## Entrada
 - Carpeta: `Corpus/TXT/Ren/`
