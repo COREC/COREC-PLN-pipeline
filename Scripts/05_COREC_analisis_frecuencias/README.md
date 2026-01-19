@@ -1,4 +1,4 @@
-# FASE 1 — Análisis de frecuencias lingüísticas básicas (COREC)
+# FASE 1 — Análisis de frecuencias lingüísticas básicas 
 
 ## Descripción
 
@@ -59,9 +59,9 @@ Para el resto de las formas léxicas:
 - Se descartan etiquetas de turno que no están en posición inicial de línea.
 - Se elimina la puntuación lateral.
 - Se limpian guiones internos (`bue-no → bueno`).
-- Se filtran únicamente tokens alfabéticos (acentos incluidos).
+- Se filtran tokens alfabéticos (acentos incluidos).
 - Se descartan las marcas `tl`, `sbx` y `r`.
-- Se normaliza a minúsculas **solo para el cómputo**.
+- Se normaliza a minúsculas únicamente para el cómputo.
 
 Cada token válido se asigna finalmente al informante o al entrevistador.
 
