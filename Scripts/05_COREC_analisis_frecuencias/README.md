@@ -4,7 +4,6 @@
 
 Esta fase tiene como objetivo **caracterizar cuantitativamente cada entrevista del corpus COREC** mediante un conjunto de atributos lingüísticos, con una doble finalidad:  
 por un lado, servir de base para la **selección de una muestra prototípica** del corpus y, por otro, facilitar el **estudio cuantitativo global** del mismo.
-
 El análisis se realiza **exclusivamente en memoria**, sin modificar los archivos originales, y respeta los rasgos propios de la oralidad y las anotaciones metalingüísticas del corpus.
 
 ## Entrada
@@ -85,6 +84,7 @@ El archivo CSV generado contiene los siguientes campos, en este orden:
 - `marcas_ruido`
 - `marcas_aclaracion`
 
+Nota: los campos id_muestra, lengua_contacto y pais_region se escriben con un apóstrofo inicial (') para que Excel no altere los identificadores. Si no se usa Excel, ese apóstrofo puede ignorarse.
 ## Uso
 
 Desde la raíz del repositorio:
