@@ -1,5 +1,5 @@
 ## Objetivo
-Estandarizar la estructura de los textos sin introducir normalización lingüística profunda. Se preservan los rasgos propios de la oralidad y las anotaciones metalingüísticas del corpus.
+Normalizar básica y estructuralmente el corpus, sin introducir estandarización lingüística profunda. Se preservan los rasgos propios de la oralidad y las anotaciones metalingüísticas del corpus.
 
 ## Entrada
 - Carpeta: `Corpus/TXT/Ren/`
