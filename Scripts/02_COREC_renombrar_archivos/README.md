@@ -1,5 +1,7 @@
+## Descripción
+
 Renombrado masivo de archivos TXT del COREC conforme al nuevo sistema de identificación (IDs compuestos).
-Este paso aplica a un **lote** (lengua/enclave) y asume que los identificadores compuestos ya han sido generados y exportados a un CSV con una columna `id`.
+Este *script* aplica a un **lote** (lengua/enclave) y asume que los identificadores compuestos ya han sido generados y exportados a un CSV con una columna `id`.
 
 ## Entrada
 
