@@ -1,9 +1,8 @@
-# FASE 1 — Análisis de frecuencias lingüísticas básicas 
+# Análisis de frecuencias lingüísticas básicas 
 
-## Descripción
+## Objetivo
 
-Esta fase tiene como objetivo **caracterizar cuantitativamente cada entrevista del corpus COREC** mediante un conjunto de atributos lingüísticos, con una doble finalidad: por un lado, servir de base para la **selección de una muestra prototípica** del corpus y, por otro, facilitar el **estudio cuantitativo global** del mismo.
-El análisis se realiza **exclusivamente en memoria**, sin modificar los archivos originales, y respeta los rasgos propios de la oralidad y las anotaciones metalingüísticas del corpus.
+El objetivo de este análisis es caracterizar cuantitativamente cada entrevista del corpus mediante varios atributos con el fin, por un lado, de su empleo en la selección de una muestra prototípica del corpus COREC y en el estudio del corpus, por otro.
 
 ## Entrada
 
