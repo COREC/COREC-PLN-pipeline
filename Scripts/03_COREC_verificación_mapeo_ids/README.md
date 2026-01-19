@@ -1,6 +1,6 @@
-# Verificación de correspondencia entre IDs y archivos
+## Descripción
 
-Este script realiza una validación de control entre los identificadores del
+Este *script* realiza una validación de control entre los identificadores del
 archivo `ids.csv` y los archivos de texto del corpus COREC, así como de la
 coherencia estructural y de contenido entre las carpetas `Original` y `Ren`.
 
