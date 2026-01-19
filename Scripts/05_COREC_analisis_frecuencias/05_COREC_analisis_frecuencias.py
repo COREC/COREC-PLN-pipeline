@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
 
 """
-ANÁLISIS DE FRECUENCIAS LINGÜÍSTICAS — COREC
-
-1) Requisitos: Python 3.10+ (solo librerías estándar; no requiere pip).
+1) Requisitos: Python 3.10+ 
 2) Edita CONFIG:
    - ROOT_IN: carpeta de entrada (Ren_limpio_fase_0)
    - CSV_OUT: ruta del CSV de salida
 3) Ejecuta:
-   python 05_corec_analisis_frecuencias.py
+   python 05_COREC_analisis_frecuencias.py
 """
 
 import os, re, csv
@@ -238,3 +236,4 @@ with open(CSV_OUT, "w", encoding="utf-8", newline="") as csvfile:
 
 
 print("analisis de frecuencias_def. CSV generado en:", CSV_OUT)
+
