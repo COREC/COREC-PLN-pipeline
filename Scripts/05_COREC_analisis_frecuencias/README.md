@@ -24,7 +24,7 @@ El script calcula, para cada entrevista, los siguientes atributos:
 - **tokens_totales**: número total de tokens lingüísticos.
 - **tokens_entrevistado**: número de tokens producidos por el informante.
 - **tokens_entrevistador**: número de tokens producidos por el entrevistador.
-- **porc_entrevistado**: proporción de habla atribuible al informante.
+- **prop_entrevistado**: proporción de habla atribuible al informante.
 - **types_total**: número de formas léxicas distintas.
 - **hapax**: número de palabras con frecuencia 1.
 - **freq_2_5**: número de palabras con frecuencia entre 2 y 5.
