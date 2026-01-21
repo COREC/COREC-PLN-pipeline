@@ -19,7 +19,7 @@ En entorno Colab, el archivo de salida se genera con sufijo `_test` para evitar 
 
 ## Atributos calculados
 
-El script calcula, para cada entrevista, los siguientes atributos:
+Para cada entrevista se calculan los siguientes atributos:
 
 - **tokens_totales**: número total de tokens lingüísticos.
 - **tokens_entrevistado**: número de tokens producidos por el informante.
