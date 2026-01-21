@@ -1,6 +1,6 @@
 ## Descripción
 
-El *script* implementa un análisis básico d efrecuencias para caracterizar cuantitativamente cada entrevista del corpus mediante varios atributos con el fin, por un lado, de su empleo en la selección de una muestra prototípica del corpus COREC y, por otro, en el estudio del corpus. 
+El *script* implementa un análisis básico de frecuencias para caracterizar cuantitativamente cada entrevista del corpus mediante varios atributos con el fin, por un lado, de su empleo en la selección de una muestra prototípica del corpus COREC y, por otro, en el estudio del corpus. 
 
 ## Entrada
 
