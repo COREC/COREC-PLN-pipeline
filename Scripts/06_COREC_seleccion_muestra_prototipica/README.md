@@ -4,9 +4,8 @@ Este script selecciona automáticamente una **muestra prototípica** del corpus 
 
 ## Entrada
 Archivo CSV (frecuencias):
-- `Frecuencias_basicas/analisis_de_frecuencias_def.csv`  
-En Colab, se usa por defecto `analisis_de_frecuencias_def_test.csv` si fue generado con sufijo `_test`.
-
+`Frecuencias_basicas/analisis_de_frecuencias_def.csv`  
+En Colab, `Frecuencias_basicas/analisis_de_frecuencias_def_test.csv`  
 Separador: `;`  
 Codificación: UTF-8
 
@@ -21,7 +20,7 @@ Archivos generados:
 - `muestra_prototipica_global.csv` (todas las lenguas concatenadas)
 
 ## Criterio de selección
-Para cada `lengua_contacto`, se calculan las siguientes métricas:
+Para cada lengua de contacto, se calculan las siguientes métricas:
 
 - `ratio_entrevistado` = `prop_entrevistado`
 - `ratio_types` = `types_total / tokens_totales`
@@ -59,5 +58,4 @@ Descomenta `drive.mount("/content/drive")` en el script y ejecuta:
 ```bash
 !python 06_COREC_seleccion_muestra_prototipica.py
 ```
-
 
