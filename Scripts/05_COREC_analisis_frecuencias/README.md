@@ -6,7 +6,7 @@ El *script* implementa un análisis básico de frecuencias para caracterizar cua
 
 - Carpeta de entrada:  
   `COREC/Corpus/TXT/Ren_limpio_fase_0/`
-- Archivos TXT preprocesados en la FASE 0, con una entrevista por archivo y turnos de habla estandarizados.
+- Archivos TXT preprocesados.
 
 ## Salida
 
@@ -28,6 +28,7 @@ Las reglas se aplican **en memoria**, con el fin de preservar los textos origina
 - Los tokens se asignan al informante o al entrevistador según la etiqueta detectada, garantizando la trazabilidad del origen de la producción lingüística.
 
 ### Tratamiento del contenido anotado
+
 - El texto se segmenta para distinguir entre producción lingüística y anotaciones editoriales.
 - Se excluyen del cómputo los contenidos entre `[ ]`, `( )` y `< >`.
 - Las anotaciones que comienzan por `IN` (Ininteligible) se contabilizan como **ruido**.
@@ -35,6 +36,7 @@ Las reglas se aplican **en memoria**, con el fin de preservar los textos origina
 - Ninguna anotación editorial se incorpora al conteo léxico.
 
 ### Normalización y filtrado de tokens
+
 Para el resto de las formas léxicas:
 
 - Se eliminan los dos puntos que indican marcas fonéticas.
@@ -50,7 +52,7 @@ Cada token válido se asigna finalmente al informante o al entrevistador.
 
 ## Campos del archivo de salida
 
-El archivo CSV generado contiene los siguientes campos, en este orden:
+El archivo CSV generado contiene los siguientes campos:
 
 - `id_muestra`
 - `lengua_contacto`
@@ -66,8 +68,7 @@ El archivo CSV generado contiene los siguientes campos, en este orden:
 - `marcas_ruido`
 - `marcas_aclaracion`
 
-Notas: los campos id_muestra, lengua_contacto y pais_region se escriben con un apóstrofo inicial (') para que Excel no altere los identificadores. Si no se usa Excel, ese apóstrofo puede ignorarse.
-(Colab): por defecto la salida se dirige a COREC/Frecuencias_basicas/analisis_de_frecuencias_def_test.csv para evitar la sobrescritura accidental del CSV definitivo.
+Notas: los campos id_muestra, lengua_contacto y pais_region se escriben con un apóstrofo inicial (') para que Excel no altere los identificadores. 
 
 ## Uso
 
