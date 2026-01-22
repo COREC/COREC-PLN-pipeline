@@ -66,7 +66,9 @@ El archivo CSV generado contiene los siguientes campos, en este orden:
 - `marcas_ruido`
 - `marcas_aclaracion`
 
-Nota: los campos id_muestra, lengua_contacto y pais_region se escriben con un apóstrofo inicial (') para que Excel no altere los identificadores. Si no se usa Excel, ese apóstrofo puede ignorarse.
+Notas: los campos id_muestra, lengua_contacto y pais_region se escriben con un apóstrofo inicial (') para que Excel no altere los identificadores. Si no se usa Excel, ese apóstrofo puede ignorarse.
+(Colab): por defecto la salida se dirige a COREC/Frecuencias_basicas/analisis_de_frecuencias_def_test.csv para evitar la sobrescritura accidental del CSV definitivo.
+
 ## Uso
 
 Desde la raíz del repositorio:
