@@ -75,4 +75,13 @@ Notas: los campos id_muestra, lengua_contacto y pais_region se escriben con un a
 Desde la raíz del repositorio:
 
 ```bash
-python 05_COREC_analisis_frecuencias.py```
+python 05_COREC_analisis_frecuencias.py
+```
+En Colab:
+
+Descomenta `drive.mount("/content/drive")` en el script y ejecuta:
+
+```bash
+!python 05_COREC_analisis_frecuencias.py
+```
+
