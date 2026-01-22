@@ -40,6 +40,7 @@ if EN_COLAB:
 # -----------------------------------------------
 #   PATRONES
 # -----------------------------------------------
+
 # Etiquetas de turno: E, I, INF, ENT, con o sin número, y combinadas con "/"
 TAG_LABEL = r'(?:INF|ENT|E|I|C)(?:\d+)?'
 TAG_SEQ   = rf'(?:{TAG_LABEL}(?:/{TAG_LABEL})*)'
@@ -146,7 +147,7 @@ def process_file(path):
                 if tok_clean.lower() in {"tl", "sbx", "r"}:
                     continue
 
-                #  7) Normalizar SOLO para conteos (no toca el archivo original)
+                #  7) Normalizar solo para conteos (no toca el archivo original)
                 tok_norm = tok_clean.lower()
 
                 #  8) Asignar al hablante correspondiente
@@ -160,10 +161,10 @@ def process_file(path):
     # -------------------------------
     tokens_totales = len(tokens_inf) + len(tokens_ent)
     if tokens_totales > 0:
-        porc_inf = round(len(tokens_inf) / tokens_totales, 3)
+        prop_inf = round(len(tokens_inf) / tokens_totales, 3)
     else:
-        porc_inf = 0.0
-
+        prop_inf = 0.0
+        
     # Frecuencias léxicas
     freqs = Counter(tokens_inf + tokens_ent)
     types_total = len(freqs)
@@ -175,7 +176,7 @@ def process_file(path):
         tokens_totales,
         len(tokens_inf),
         len(tokens_ent),
-        porc_inf,
+        prop_inf,
         types_total,
         hapax,
         freq_2_5,
@@ -195,7 +196,7 @@ fields = [
     "tokens_totales",
     "tokens_entrevistado",
     "tokens_entrevistador",
-    "porc_entrevistado",
+    "prop_entrevistado",
     "types_total",
     "hapax",
     "freq_2_5",
@@ -236,4 +237,6 @@ with open(CSV_OUT, "w", encoding="utf-8", newline="") as csvfile:
 
 
 print("analisis de frecuencias_def. CSV generado en:", CSV_OUT)
+
+
 
