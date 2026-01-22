@@ -17,20 +17,6 @@ El *script* implementa un análisis básico de frecuencias para caracterizar cua
 
 En entorno Colab, el archivo de salida se genera con sufijo `_test` para evitar sobrescrituras accidentales.
 
-## Atributos calculados
-
-Para cada entrevista se calculan los siguientes atributos:
-
-- **tokens_totales**: número total de tokens lingüísticos.
-- **tokens_entrevistado**: número de tokens producidos por el informante.
-- **tokens_entrevistador**: número de tokens producidos por el entrevistador.
-- **prop_entrevistado**: proporción de habla atribuible al informante.
-- **types_total**: número de formas léxicas distintas.
-- **hapax**: número de palabras con frecuencia 1.
-- **freq_2_5**: número de palabras con frecuencia entre 2 y 5.
-- **%_freq_2_5**: porcentaje de palabras con frecuencia entre 2 y 5.
-- **marcas_ruido**: número de marcas de contenido no inteligible.
-- **marcas_aclaracion**: número de aclaraciones editoriales del transcriptor.
 
 ## Reglas de análisis aplicadas
 
@@ -72,7 +58,7 @@ El archivo CSV generado contiene los siguientes campos, en este orden:
 - `tokens_totales`
 - `tokens_entrevistado`
 - `tokens_entrevistador`
-- `porc_entrevistado`
+- `prop_entrevistado`
 - `types_total`
 - `hapax`
 - `freq_2_5`
@@ -86,4 +72,4 @@ Nota: los campos id_muestra, lengua_contacto y pais_region se escriben con un ap
 Desde la raíz del repositorio:
 
 ```bash
-python 05_COREC_analisis_frecuencias.py
+python 05_COREC_analisis_frecuencias.py```
