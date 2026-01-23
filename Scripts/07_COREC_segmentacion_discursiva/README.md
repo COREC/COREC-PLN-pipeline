@@ -1,5 +1,5 @@
 ## Descripción
-Este script segmenta automáticamente las transcripciones ortográficas del COREC. Para ello, toma como fronteras candidatas las marcas de pausa `/` y `//` (normalizadas a `/`).
+Este *script* segmenta automáticamente las transcripciones ortográficas del COREC. Para ello, toma como fronteras candidatas las marcas de pausa `/` y `//` (normalizadas a `/`).
 La decisión de corte combina rasgos morfosintácticos (spaCy) y pragmático-discursivos, con un mecanismo de **bloqueo estructural** para preservar dependencias proyectadas.
 
 ## Entrada
@@ -73,11 +73,12 @@ Instala spaCy y descarga el modelo:
 Si usas rutas bajo /content/drive/..., monta Drive:
 
 descomenta en el script:
-
+```python
 drive.mount("/content/drive")
-
+```
 Ejecuta:
+
+```bash
 !python 07_COREC_segmentacion_discursiva.py
-
-
+```
 
