@@ -65,9 +65,10 @@ Instala spaCy y el modelo:
 ```bash
 python -m pip install -U spacy
 python -m spacy download es_core_news_lg
+```
 
 Ejecuta:
-
+```
 python 07_COREC_segmentacion_discursiva.py
 
 En Colab
