@@ -51,7 +51,7 @@ Aunque se cumplan las condiciones generales, el corte se inhibe si el contexto i
 
 ## Uso
 
-### En local (desde la raíz del repositorio)
+## En local (desde la raíz del repositorio)
 Instala spaCy y el modelo:
 ```bash
 python -m pip install -U spacy
@@ -61,7 +61,7 @@ Ejecuta:
 ```bash
 python 07_COREC_segmentacion_discursiva.py
 ```
-En Colab
+## En Colab
 
 Instala spaCy y descarga el modelo:
 
