@@ -56,27 +56,19 @@ Instala spaCy y el modelo:
 ```bash
 python -m pip install -U spacy
 python -m spacy download es_core_news_lg
-
-
-## Uso
-
-### En local (desde la raíz del repositorio)
-Instala spaCy y el modelo:
-```bash
-python -m pip install -U spacy
-python -m spacy download es_core_news_lg
 ```
-
 Ejecuta:
-```
+```bash
 python 07_COREC_segmentacion_discursiva.py
-
+```
 En Colab
 
 Instala spaCy y descarga el modelo:
 
+```bash
 !pip -q install -U spacy
 !python -m spacy download es_core_news_lg -q
+```
 
 Si usas rutas bajo /content/drive/..., monta Drive:
 
@@ -85,7 +77,7 @@ descomenta en el script:
 drive.mount("/content/drive")
 
 Ejecuta:
-
 !python 07_COREC_segmentacion_discursiva.py
+
 
 
