@@ -467,23 +467,26 @@ def norma11_dicc(text: str, id_archivo: str = "") -> Tuple[str, List[Tuple[str, 
 
     # ===========================================================
     # ASTURIANU: activar SOLO si el archivo empieza por 014
-    # (vale para "014_", "014-" o "014..." en general)
     # ===========================================================
     AST_MODE = id_archivo.startswith("014")
 
-    # -------- (0) PREPASO asturianu: split por guion (solo AST_MODE) --------
     if AST_MODE:
         def repl_ast(m: re.Match) -> str:
             fo = m.group(0)
-            fr = f"{m.group('base')} {m.group('clit')}"
+            base = m.group("base")
+            clit = m.group("clit")
+
+            if clit == "y":
+                fr = f"{base} le"
+            else:
+                fr = f"{base} {clit}"
+
             events.append((fo, fr, "AST_GUION_CLIT_SPLIT"))
             return fr
 
         text = RE_AST_CLIT.sub(repl_ast, text)
 
-        # -------- (1) clíticos ya separados: expandir (solo AST_MODE) --------
         CLIT_MAP = {
-            "y": "le",
             "ys": "les",
             "ylo": "se lo",
             "ylu": "se lo",
@@ -492,7 +495,32 @@ def norma11_dicc(text: str, id_archivo: str = "") -> Tuple[str, List[Tuple[str, 
             "yles": "se les",
         }
     else:
-        CLIT_MAP = {}  # fuera de asturiano, no tocar
+        CLIT_MAP = {}
+
+    def repl(m: re.Match) -> str:
+        tok = m.group(0)
+
+        # PROTECCIÓN GENERAL: si el token está pegado a ':', no aplicar N11_MAP
+        i, j = m.span()
+        left = text[i - 1] if i > 0 else ""
+        right = text[j] if j < len(text) else ""
+        if left == ":" or right == ":":
+            return tok
+
+        # clíticos (solo AST_MODE)
+        if tok in CLIT_MAP:
+            fr = CLIT_MAP[tok]
+            events.append((tok, fr, "AST_CLIT_MAP"))
+            return fr
+
+        fr = N11_MAP.get(tok, tok)
+        if fr != tok:
+            events.append((tok, fr, "NORMA11_APLICADA"))
+        return fr
+
+    out = re.sub(r"\b\w+\b", repl, text, flags=re.UNICODE)
+    out = re.sub(r"\s{2,}", " ", out)
+    return out, events
 
     def repl(m: re.Match) -> str:
         tok = m.group(0)
@@ -518,6 +546,7 @@ def norma11_dicc(text: str, id_archivo: str = "") -> Tuple[str, List[Tuple[str, 
     out = re.sub(r"\b\w+\b", repl, text, flags=re.UNICODE)
     out = re.sub(r"\s{2,}", " ", out)
     return out, events
+
 
 # ===========================================================
 # LISTA EXACTA (coincidencia literal)
