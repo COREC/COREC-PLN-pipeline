@@ -154,9 +154,9 @@ VOWEL_REPEAT_EO_RE  = re.compile(r"([EOÉÓeoéó])\1{2,}")
 
 Y_REPEAT_RE     = re.compile(r"\b[yY]{2,}\b", flags=re.UNICODE)
 
-# Norma 8b — consonantes repetidas al FINAL (2+), excepto ll/rr
+# Norma 8b — consonantes repetidas al FINAL (2+), excepto ll/rr/mm
 CONS_FINAL_REPEAT_RE = re.compile(
-    r"\b(?P<stem>\w*?)(?P<c>[BCDFGHJKLMNPQRSTVWXZÑbcdfghjklmnpqrstvwxzñ])(?P=c)+\b",
+    r"\b(?P<stem>\w*?)(?P<c>[BCDFGHJKLMNPQRSTVWXZÑbcdfghjklnpqrstvwxzñ])(?P=c)+\b",
     flags=re.UNICODE
 )
 
