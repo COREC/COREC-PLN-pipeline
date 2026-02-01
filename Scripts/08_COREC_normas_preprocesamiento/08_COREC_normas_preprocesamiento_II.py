@@ -522,31 +522,6 @@ def norma11_dicc(text: str, id_archivo: str = "") -> Tuple[str, List[Tuple[str, 
     out = re.sub(r"\s{2,}", " ", out)
     return out, events
 
-    def repl(m: re.Match) -> str:
-        tok = m.group(0)
-
-        # PROTECCIÓN GENERAL: si el token está pegado a ':', no aplicar N11_MAP
-        i, j = m.span()
-        left = text[i - 1] if i > 0 else ""
-        right = text[j] if j < len(text) else ""
-        if left == ":" or right == ":":
-            return tok
-
-        # aplicar primero el mapa de clíticos (solo si AST_MODE)
-        if tok in CLIT_MAP:
-            fr = CLIT_MAP[tok]
-            events.append((tok, fr, "AST_CLIT_MAP"))
-            return fr
-
-        fr = N11_MAP.get(tok, tok)
-        if fr != tok:
-            events.append((tok, fr, "NORMA11_APLICADA"))
-        return fr
-
-    out = re.sub(r"\b\w+\b", repl, text, flags=re.UNICODE)
-    out = re.sub(r"\s{2,}", " ", out)
-    return out, events
-
 
 # ===========================================================
 # LISTA EXACTA (coincidencia literal)
