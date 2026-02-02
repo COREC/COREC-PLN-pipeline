@@ -114,7 +114,6 @@ def hun_ok(word: str) -> bool:
     except Exception:
         return False
 
-
 # ===========================================================
 # Norma 9 (APÓSTROFO) + Norma 11 (DICCIONARIO)
 # ===========================================================
@@ -360,9 +359,8 @@ N11_MAP: Dict[str, str] = {
     "verdak": "verdad",
     "vinía": "venía",
     "¿verda": "¿verdad",
-  }
-
-    N11_MAP_AST: Dict[str, str] = {
+}
+N11_MAP_AST: Dict[str, str] = {
     "asturianu": "asturiano",
     "acuérdome": "acuerdo me",
     "diz": "dice",
