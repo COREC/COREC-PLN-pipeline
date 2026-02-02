@@ -603,8 +603,6 @@ N11_MAP_AST: Dict[str, str] = {
     "cagon": "cago en",
 }
 
-
-
 # --- ASTURIANU: base-guion-clítico (base >= 3) + excepciones base=2 ---
 
 RE_AST_CLIT = re.compile(
@@ -616,9 +614,6 @@ RE_AST_CLIT = re.compile(
 def norma11_dicc(text: str, id_archivo: str = "") -> Tuple[str, List[Tuple[str, str, str]]]:
     events = []
 
-    # ===========================================================
-    # ASTURIANU: activar SOLO si el archivo empieza por 014
-    # ===========================================================
     AST_MODE = id_archivo.startswith("014")
 
     if AST_MODE:
@@ -656,7 +651,6 @@ def norma11_dicc(text: str, id_archivo: str = "") -> Tuple[str, List[Tuple[str, 
     def repl(m: re.Match) -> str:
         tok = m.group(0)
 
-        # PROTECCIÓN GENERAL: si el token está pegado a ':', no aplicar N11_MAP
         i, j = m.span()
         left = text[i - 1] if i > 0 else ""
         right = text[j] if j < len(text) else ""
@@ -672,7 +666,7 @@ def norma11_dicc(text: str, id_archivo: str = "") -> Tuple[str, List[Tuple[str, 
         # diccionario general
         fr = N11_MAP.get(tok, tok)
 
-        # diccionario asturiano SOLO en 014
+        # diccionario asturiano en 014
         if AST_MODE:
             fr2 = N11_MAP_AST.get(tok, tok)
             if fr2 != tok:
@@ -722,8 +716,6 @@ EXACT_MAP: Dict[str, str] = {
     "no: rte": "norte",
     "entoce:": "entonces",
 }
-
-
 
 PH_PREFIX = "<<<EXACT_FIX_"
 PH_SUFFIX = ">>>"
@@ -842,7 +834,6 @@ def should_join_spaced(a: str, b: str, observed: Set[str]) -> bool:
 
     return ab in observed
 
-
 # ===========================================================
 # DATA STRUCT
 # ===========================================================
@@ -873,7 +864,6 @@ def iter_txt_files(root: str) -> List[Path]:
     if rootp.is_file() and rootp.suffix.lower() == ".txt":
         return [rootp]
     return sorted([p for p in rootp.rglob("*.txt") if p.is_file()])
-
 
 # ===========================================================
 # Norma 2 ESTRICTA
@@ -931,7 +921,6 @@ def extract_pairs_all_colon(contexto_in: str, observed: Set[str]) -> List[Tuple[
         accion = "NORMA2_APLICADA" if fr != fo else "NORMA2_NO_APLICADA"
         triples.append((fo, fr, accion))
     return triples
-
 
 # ===========================================================
 # MAIN
