@@ -360,6 +360,7 @@ N11_MAP: Dict[str, str] = {
     "verdak": "verdad",
     "vinía": "venía",
     "¿verda": "¿verdad",
+  }
 
     N11_MAP_AST: Dict[str, str] = {
     "asturianu": "asturiano",
