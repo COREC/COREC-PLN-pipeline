@@ -38,18 +38,25 @@ Instalar hunspell + diccionarios es_ES del sistema + wrapper hunspell para Pytho
 Cada evento registrado incluye:
 id_archivo, id_ud, linea_n, hablante, rol, norma_id, fenomeno, forma_original, forma_resultante, accion, contexto
 
+
 ## Uso
 Desde la raíz del repositorio
+```
 python 08_COREC_normas_preprocesamiento.py
+```
+## Colab (opcional)
 
-Colab (opcional)
+from google.colab import drive
+drive.mount("/content/drive")
 
-Monta Drive: drive.mount("/content/drive")
 
 Ajusta REPO_ROOT en CONFIG
 
 Ejecuta:
+
+```
 !python 08_COREC_normas_preprocesamiento.py
+```
 
 
 
