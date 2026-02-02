@@ -42,7 +42,7 @@ id_archivo, id_ud, linea_n, hablante, rol, norma_id, fenomeno, forma_original, f
 ## Uso
 Desde la raíz del repositorio
 ```
-python 08_COREC_normas_preprocesamiento.py
+python 08_COREC_normas_preprocesamiento_I.py
 ```
 ## Colab (opcional)
 
@@ -55,7 +55,7 @@ Ajusta REPO_ROOT en CONFIG
 Ejecuta:
 
 ```
-!python 08_COREC_normas_preprocesamiento.py
+!python 08_COREC_normas_preprocesamiento_I.py
 ```
 
 
